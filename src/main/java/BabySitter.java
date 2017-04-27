@@ -49,8 +49,10 @@ public class BabySitter {
 
 
 	public Object calculateHoursAfterMidnight(int startTime, int endTime) {
-		if (startTime <=12 && endTime >= 1){
+		if (startTime>= 5 && startTime <=12 && endTime >= 1){
 			hoursWorkedAfterMidnight = endTime;
+		}else if(startTime >= 1 && endTime <= 4){
+			hoursWorkedAfterMidnight = endTime - startTime;
 		}
 		return hoursWorkedAfterMidnight ;
 		
