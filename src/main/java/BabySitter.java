@@ -29,6 +29,11 @@ public class BabySitter {
 		}
 		return  hoursWorkedBeforeBedtimeAdjusted;	
 	}
+
+	public int calculateHoursAfterBedtimeButBeforeMidnight(int bedTime, int EndTime) {
+		
+		return 4;
+	}
 	
 
 	

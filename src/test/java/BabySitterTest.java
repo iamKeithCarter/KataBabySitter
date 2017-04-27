@@ -39,7 +39,13 @@ public class BabySitterTest {
 	
 	}
 	
+	@Test
+	public void whenGivenABedtimeAndEndTimeItfindsTheHoursWorkedAfterBedtimeButBeforeMidnight() {
+	BabySitter underTest = new BabySitter();
+	assertEquals(4,underTest.calculateHoursAfterBedtimeButBeforeMidnight(8,12));
 	
+	
+	}
 	
 }
 
