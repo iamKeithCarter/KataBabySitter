@@ -18,11 +18,13 @@ public class BabySitterTest {
 	}
 	
 	@Test
-	public void whenSitterPassedEndTimeItReturnsThatTime() {
+	public void whenSitterPassedAnyEndTimeItReturnsThatTime() {
 	BabySitter underTest = new BabySitter();
 	assertEquals(4,underTest.determineEndTime(4));
-	
+	assertEquals(7,underTest.determineEndTime(7));
 	}
+	
+	
 	
 }
 
