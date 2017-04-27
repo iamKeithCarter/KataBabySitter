@@ -35,7 +35,7 @@ public class BabySitterTest {
 	public void whenGivenAStartAndBedtimeItfindsTheHoursWorkedBeforeBedTime() {
 	BabySitter underTest = new BabySitter();
 	assertEquals(4,underTest.calculateHoursBeforeBedtime(10,6));
-	
+	assertEquals(1,underTest.calculateHoursBeforeBedtime(2,11));
 	
 	}
 	
