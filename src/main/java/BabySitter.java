@@ -7,6 +7,11 @@ public class BabySitter {
 		this.startTime =startTime;
 				return startTime;
 	}
+
+	public int determineEndTime(int endTime) {
+		// TODO Auto-generated method stub
+		return endTime; 
+	}
  
 
 }
