@@ -49,6 +49,7 @@ public class BabySitterTest {
 	public void whenGivenAStartAndEndTimeItfindsTheHoursWorkedAfterMidnight() {
 	BabySitter underTest = new BabySitter();
 	assertEquals(3,underTest.calculateHoursAfterMidnight(8,3));
+	
 
 	
 	}
