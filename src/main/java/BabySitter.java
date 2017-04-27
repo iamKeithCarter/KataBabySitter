@@ -1,9 +1,12 @@
 
 public class BabySitter {
 
-	public int determineStartTime(int i) {
-		// TODO Auto-generated method stub
-		return 6;
+	private int startTime;
+	
+	public int determineStartTime(int startTime) {
+		this.startTime =startTime;
+				return startTime;
 	}
+ 
 
 }
