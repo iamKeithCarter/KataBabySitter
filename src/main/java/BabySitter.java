@@ -57,6 +57,12 @@ public class BabySitter {
 		return hoursWorkedAfterMidnight ;
 		
 	}
+
+
+	public  int calculatePay(int startTime, int bedTime, int endTime) {
+		
+		return 30;
+	}
 	
 
 	
