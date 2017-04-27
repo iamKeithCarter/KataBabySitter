@@ -28,6 +28,8 @@ public class BabySitterTest {
 	public void whenSitterPassedBedTimeItReturnsThatTime() {
 	BabySitter underTest = new BabySitter();
 	assertEquals(8,underTest.setBedTime(8));
+	assertEquals(12,underTest.setBedTime(12));
+	
 	
 	}
 	

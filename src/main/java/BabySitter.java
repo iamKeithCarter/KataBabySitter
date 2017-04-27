@@ -15,7 +15,7 @@ public class BabySitter {
 
 	public Object setBedTime(int bedTime) {
 		// TODO Auto-generated method stub
-		return 8;
+		return bedTime;
 	}
  
 
