@@ -1,0 +1,11 @@
+# Eclipse
+.project
+.classpath
+.settings/
+bin/
+
+# Gradle
+.gradle/
+build/
+
+.ds_store
