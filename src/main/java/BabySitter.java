@@ -4,6 +4,7 @@ public class BabySitter {
 	private int startTime;
 	private int hoursWorkedBeforeBedtimeAdjusted;
 	private int hoursWorkedAfterBedtime;
+	private Object hoursWorkedAfterMidnight;
 	
 	
 	public int setStartTime(int startTime) {
@@ -48,8 +49,8 @@ public class BabySitter {
 
 
 	public Object calculateHoursAfterMidnight(int startTime, int endTime) {
-		
-		return 3 ;
+		hoursWorkedAfterMidnight = endTime;
+		return hoursWorkedAfterMidnight ;
 	}
 	
 
