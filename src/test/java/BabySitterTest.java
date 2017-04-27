@@ -24,6 +24,12 @@ public class BabySitterTest {
 	assertEquals(7,underTest.determineEndTime(7));
 	}
 	
+	@Test
+	public void whenSitterPassedBedTimeItReturnsThatTime() {
+	BabySitter underTest = new BabySitter();
+	assertEquals(8,underTest.determineBedTime(8));
+	
+	}
 	
 	
 }

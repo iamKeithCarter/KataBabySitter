@@ -12,6 +12,11 @@ public class BabySitter {
 		// TODO Auto-generated method stub
 		return endTime; 
 	}
+
+	public Object determineBedTime(int bedTime) {
+		// TODO Auto-generated method stub
+		return 8;
+	}
  
 
 }
