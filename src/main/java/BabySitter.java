@@ -13,10 +13,21 @@ public class BabySitter {
 		return endTime; 
 	}
 
-	public Object setBedTime(int bedTime) {
+	public int setBedTime(int bedTime) {
 		// TODO Auto-generated method stub
 		return bedTime;
 	}
+
+	public int calculateHoursBeforeBedtime(int bedTime, int startTime) {
+		// TODO Auto-generated method stub
+		return 4;
+	}
+
+	
+	
+
+	
+	
  
 
 }

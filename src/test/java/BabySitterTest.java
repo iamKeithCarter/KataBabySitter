@@ -29,9 +29,15 @@ public class BabySitterTest {
 	BabySitter underTest = new BabySitter();
 	assertEquals(8,underTest.setBedTime(8));
 	assertEquals(12,underTest.setBedTime(12));
+	}
 	
+	@Test
+	public void whenGivenAStartAndBedtimeItfindsTheHoursWorkedBeforeBedTime() {
+	BabySitter underTest = new BabySitter();
+	assertEquals(4,underTest.calculateHoursBeforeBedtime(10,6));
 	
 	}
+	
 	
 	
 }
