@@ -36,7 +36,6 @@ public class BabySitterTest {
 	BabySitter underTest = new BabySitter();
 	assertEquals(4,underTest.calculateHoursBeforeBedtime(10,6));
 	assertEquals(1,underTest.calculateHoursBeforeBedtime(2,11));
-	
 	}
 	
 	@Test
@@ -44,8 +43,14 @@ public class BabySitterTest {
 	BabySitter underTest = new BabySitter();
 	assertEquals(4,underTest.calculateHoursAfterBedtimeButBeforeMidnight(8,12));
 	assertEquals(0,underTest.calculateHoursAfterBedtimeButBeforeMidnight(1,4));
-	
 	}
 	
+	@Test
+	public void whenGivenAStartAndEndTimeItfindsTheHoursWorkedAfterMidnight() {
+	BabySitter underTest = new BabySitter();
+	assertEquals(3,underTest.calculateHoursAfterMidnight(8,3));
+
+	
+	}
 }
 

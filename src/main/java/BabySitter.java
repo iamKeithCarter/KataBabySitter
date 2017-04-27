@@ -45,6 +45,12 @@ public class BabySitter {
 		}
 		return hoursWorkedAfterBedtime;
 	}
+
+
+	public Object calculateHoursAfterMidnight(int startTime, int endTime) {
+		
+		return 3 ;
+	}
 	
 
 	
