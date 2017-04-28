@@ -1,7 +1,7 @@
 
 public class BabySitter {
 
-	private int startTime;
+	
 	private int hoursWorkedBeforeBedtimeAdjusted;
 	private int hoursWorkedAfterBedtime;
 	private int hoursWorkedAfterMidnight;
@@ -26,7 +26,7 @@ public class BabySitter {
 	
 	
 	public int setStartTime(int startTime) {
-		this.startTime = startTime;
+		
 				return startTime;
 	}
 
