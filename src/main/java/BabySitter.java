@@ -4,7 +4,9 @@ public class BabySitter {
 	private int startTime;
 	private int hoursWorkedBeforeBedtimeAdjusted;
 	private int hoursWorkedAfterBedtime;
-	private Object hoursWorkedAfterMidnight;
+	private int hoursWorkedAfterMidnight;
+	private int BabySitterPayment;
+	
 	
 	
 	public int setStartTime(int startTime) {
@@ -48,25 +50,22 @@ public class BabySitter {
 	}
 
 
-	public Object calculateHoursAfterMidnight(int startTime, int endTime) {
-		if (startTime>= 5 && startTime <=12 && endTime >= 1){
+	public int calculateHoursAfterMidnight(int startTime, int endTime) {
+		if (startTime>= 5 && startTime <=12 && endTime >= 1 && endTime<=4){
 			hoursWorkedAfterMidnight = endTime;
 		}else if(startTime >= 1 && endTime <= 4){
 			hoursWorkedAfterMidnight = endTime - startTime;
 		}
 		return hoursWorkedAfterMidnight ;
-		
 	}
 
 
 	public  int calculatePay(int startTime, int bedTime, int endTime) {
-		
-		return 30;
+	
+		 BabySitterPayment = calculateHoursAfterBedtimeButBeforeMidnight(bedTime,endTime) * 8 + calculateHoursAfterMidnight(startTime, endTime)* 16 + calculateHoursBeforeBedtime (bedTime,  startTime) * 12; 
+
+	 return BabySitterPayment;
 	}
 	
-
-	
-	
- 
 
 }

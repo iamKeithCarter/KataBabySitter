@@ -55,7 +55,7 @@ public class BabySitterTest {
 	@Test
 	public void whenGivenStartTimeEndTimeAndBedTimeCalulatePay() {
 	BabySitter underTest = new BabySitter();
-	assertEquals(30,underTest.calculatePay(5,8,12));
+	assertEquals(100,underTest.calculatePay(5,8,2));
 
 
 	
