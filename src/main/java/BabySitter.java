@@ -26,19 +26,16 @@ public class BabySitter {
 	
 	
 	public int setStartTime(int startTime) {
-		
 				return startTime;
 	}
 
 	
 	public int setEndTime(int endTime) {
-		
 		return endTime; 
 	}
 
 	
 	public int setBedTime(int bedTime) {
-		
 		return bedTime;
 	}
 
