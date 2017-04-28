@@ -5,12 +5,20 @@ public class BabySitter {
 	private int hoursWorkedBeforeBedtimeAdjusted;
 	private int hoursWorkedAfterBedtime;
 	private int hoursWorkedAfterMidnight;
-	private int BabySitterPayment;
+	private int babySitterPayment;
+	private int minStartTime = 5;
+	private int maxEndTime = 4;
+	private int hourAfterMidnight = 1;
+	private int midnight = 12;
+	private int beforeBedtimePay = 12;
+	private int afterBedtimePay = 8;
+	private int afterMidnightPay = 16;
+			
 	
 	
 	
 	public int setStartTime(int startTime) {
-		this.startTime =startTime;
+		this.startTime = startTime;
 				return startTime;
 	}
 
@@ -29,21 +37,21 @@ public class BabySitter {
 	
 	public int calculateHoursBeforeBedtime(int bedTime, int startTime) {
 		
-		if (bedTime >= 5 && bedTime <= 12){
+		if (bedTime >= minStartTime && bedTime <= midnight){
 			 hoursWorkedBeforeBedtimeAdjusted = bedTime-startTime;
 			
-		}else if (bedTime >=1 && bedTime <=4){
-			 hoursWorkedBeforeBedtimeAdjusted = 12-startTime;	
+		}else if (bedTime >= hourAfterMidnight && bedTime <= maxEndTime){
+			 hoursWorkedBeforeBedtimeAdjusted = midnight-startTime;	
 		}
 		return  hoursWorkedBeforeBedtimeAdjusted;	
 	}
 
 	
 	public int calculateHoursAfterBedtimeButBeforeMidnight(int bedTime, int EndTime) {
-		if (bedTime >= 5 && bedTime <= 12){
-			hoursWorkedAfterBedtime = 12 - bedTime;
+		if (bedTime >= minStartTime && bedTime <= midnight){
+			hoursWorkedAfterBedtime = midnight - bedTime;
 			
-		}else if (bedTime >=1 && bedTime <=4){
+		}else if (bedTime >= hourAfterMidnight && bedTime <= maxEndTime){
 			hoursWorkedAfterBedtime = 0;
 		}
 		return hoursWorkedAfterBedtime;
@@ -51,9 +59,9 @@ public class BabySitter {
 
 
 	public int calculateHoursAfterMidnight(int startTime, int endTime) {
-		if (startTime>= 5 && startTime <=12 && endTime >= 1 && endTime<=4){
+		if (startTime >= minStartTime && startTime <= midnight && endTime >= hourAfterMidnight && endTime <= maxEndTime){
 			hoursWorkedAfterMidnight = endTime;
-		}else if(startTime >= 1 && endTime <= 4){
+		}else if(startTime >= hourAfterMidnight && endTime <= maxEndTime){
 			hoursWorkedAfterMidnight = endTime - startTime;
 		}
 		return hoursWorkedAfterMidnight ;
@@ -62,9 +70,9 @@ public class BabySitter {
 
 	public  int calculatePay(int startTime, int bedTime, int endTime) {
 	
-		 BabySitterPayment = calculateHoursAfterBedtimeButBeforeMidnight(bedTime,endTime) * 8 + calculateHoursAfterMidnight(startTime, endTime)* 16 + calculateHoursBeforeBedtime (bedTime,  startTime) * 12; 
+		 babySitterPayment = calculateHoursAfterBedtimeButBeforeMidnight(bedTime,endTime) * afterBedtimePay + calculateHoursAfterMidnight(startTime, endTime)* afterMidnightPay  + calculateHoursBeforeBedtime (bedTime,  startTime) * beforeBedtimePay; 
 
-	 return BabySitterPayment;
+	 return babySitterPayment;
 	}
 	
 
